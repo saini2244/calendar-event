@@ -1,0 +1,12 @@
+<div class="event-wrapper">
+    <form class="event-form" [formGroup]='eventForm'>
+        <mat-form-field>
+            <input matInput placeholder="Enter a title" formControlName="title" type="text" />
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Please select date" formControlName="date" type="date" />
+        </mat-form-field>
+
+        <button class="add-button" [ngClass]="eventForm.valid ? '' : 'disabled'" type="button" [disabled]="!eventForm.valid" (click)="addEvent()">{{eventData ? 'Update' : 'Save'}}</button>
+    </form>
+</div>

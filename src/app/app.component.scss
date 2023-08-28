@@ -1,0 +1,61 @@
+.wrapper {
+    width: 1240px;
+    margin: auto;
+    padding: 1rem;
+
+    .add-new-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .add-new {
+            border: 1px solid var(--primary);
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        border-radius: 8px;
+        grid-gap: 10px;
+
+        .days {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+
+            .active {
+                color: var(--primary);
+            }
+
+            .events-wrapper {
+                display: flex;
+                flex-direction: column;
+                max-height: 150px;
+                overflow: auto;
+                
+                .menu-button-class {
+                    text-align: left;
+                    background-color: var(--primary);
+                    color: white;
+                    margin: 0.25rem 0px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}

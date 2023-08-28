@@ -1,0 +1,22 @@
+.event-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .event-form {
+        display: flex;
+        flex-direction: column;
+
+        .add-button {
+            border: 1px solid var(--primary);
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &.disabled {
+                opacity: 0.5;
+            }
+        }
+    }
+}
